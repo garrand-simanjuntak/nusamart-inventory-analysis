@@ -86,6 +86,29 @@ These recommendations were developed from the project analysis and have not been
 
 ## 6. Tools & Links
 
+
+### SQL Query Files
+
+| File | Description |
+|---|---|
+| [01_warehouse_stock_health.sql](sql/01_warehouse_stock_health.sql) | Evaluates warehouse inventory health using reorder point indicators. |
+| [02_surabaya_understock.sql](sql/02_surabaya_understock.sql) | Identifies products with recurring low-stock conditions in Surabaya warehouse. |
+| [03_top_selling_products.sql](sql/03_top_selling_products.sql) | Identifies the top 10 products by units sold in East Java & Bali during H1 2026. |
+| [04_inventory_retail_performance.sql](sql/04_inventory_retail_performance.sql) | Examines warehouse inventory indicators alongside retail revenue and gross profit. |
+
+### Reproducibility Notes
+
+All SQL queries use GoogleSQL syntax and were developed using Google BigQuery.
+
+The analysis uses the NusaMart dataset provided for the FGSeara Data Analytics Bootcamp. Running the queries requires access to the underlying tables in the `nusamart` dataset.
+
+**Inventory metric definitions:**
+- Query 01: Critical stock is defined as `stock_on_hand <= reorder_point`.
+- Query 02: Understock is defined as `stock_on_hand < reorder_point`.
+- Both indicators are calculated from inventory snapshot records, not confirmed stockout events.
+
+The results documented in this repository are based on the original project outputs. The reorganized SQL files have not yet been independently re-executed.
+
 - **SQL:** Google BigQuery (GoogleSQL)
 - **Presentation:** Team project slide deck
 - **Repository:** This GitHub repository
