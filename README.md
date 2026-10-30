@@ -48,6 +48,14 @@ SQL techniques included JOIN, Common Table Expressions (CTEs), conditional aggre
 
 ## 4. Results
 
+### Warehouse Stock Health Visualization
+
+![Warehouse Stock Health](images/nusamart_warehouse_stock_health.png)
+
+The chart shows the percentage of inventory observations
+at or below their reorder points across four warehouses
+during 2026. Surabaya recorded the highest proportion
+at 17.67%, indicating a priority area for inventory review.
 ### Warehouse Stock Health
 
 - Surabaya warehouse (WH03) recorded the highest proportion of inventory observations at or below the reorder point, at **17.67%**.
